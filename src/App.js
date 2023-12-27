@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import AddUserData from "./components/AddUserData";
+import DisplayUserData from "./components/DisplayUserData";
+// import UserInputForm from "./components/UserInputForm";
+
+const userArray = [
+  {
+    username: "Jayant",
+    age: 22,
+  },
+  {
+    username: "Divyansh",
+    age: 22,
+  },
+];
 
 function App() {
+  const [array, setArray] = useState(userArray);
+
+  const updateDataHandler = (updatedArray) => {
+    setArray((prevData) => {
+      return [...prevData, updatedArray];
+    });
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AddUserData onUpdateData={updateDataHandler} />
+      <DisplayUserData userData={array}/>
     </div>
   );
 }

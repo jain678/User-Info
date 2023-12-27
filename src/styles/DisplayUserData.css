@@ -1,0 +1,35 @@
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+.container2 {
+  /* padding: 16px; */
+  background-color: white;
+  /* border: 5px solid gray; */
+  margin-left: 25%;
+  margin-top: 3%;
+  align-content: center;
+  width: 50%;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 10px;
+}
+.container2 {
+  text-align: left;
+  padding: 10px;
+  /* box-sizing: border-box; */
+}
+.user-info{
+    border: 1px solid black;
+    padding: 10px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+    /* margin-top: 5px; */
+}
+/* #result{
+    color: white;
+} */

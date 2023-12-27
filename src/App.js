@@ -13,6 +13,10 @@ const userArray = [
     username: "Divyansh",
     age: 22,
   },
+  {
+    username: "Harsh",
+    age: 22
+  }
 ];
 
 function App() {

@@ -3,15 +3,15 @@ import "../styles/DisplayUserData.css";
 
 function DisplayUserData(props) {
   return (
-    <div className="card container2">
+    <ul className="users card">
       {props.userData.map((item) => (
-        <div className="user-info">
-          <h4>
+        <div >
+          <li>
             {item.username} is {item.age} years old.
-          </h4>
+          </li>
         </div>
       ))}
-    </div>
+    </ul>
   );
 }
 
